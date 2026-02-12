@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 // ── Data from phelix001/epstein-network (focused_entities.json) ──
-const RAW_NODES = [
+const RAW_NODES: { id: string; count: number; category: string; locations: Record<string, number>; years: Record<string, number> }[] = [
   { id: "Jeffrey Epstein", count: 1508, category: "core", locations: {"Palm Beach":62,"Florida":51,"New York":49,"Miami":29,"Manhattan":5,"New Mexico":4,"St. Thomas":3,"London":2,"Paris":1}, years: {"1994":42,"1995":10,"1996":12,"1997":22,"2000":11,"2001":7,"2002":5,"2003":15,"2004":17,"2005":191,"2006":170,"2007":91,"2008":75,"2009":26,"2010":13,"2011":42,"2012":2,"2013":1,"2014":5,"2015":5,"2016":46,"2017":13,"2018":10,"2019":139,"2020":88,"2021":55,"2022":44,"2023":75,"2024":68,"2025":24} },
   { id: "Ghislaine Maxwell", count: 1193, category: "core", locations: {"New York":20,"Palm Beach":14,"Florida":11,"Miami":7,"New Mexico":4,"Manhattan":2,"London":2,"Paris":1}, years: {"1994":42,"1995":10,"1996":12,"1997":22,"2000":2,"2001":1,"2002":2,"2004":5,"2005":27,"2006":2,"2008":6,"2011":42,"2016":46,"2017":13,"2019":60,"2020":88,"2021":55,"2022":44,"2023":75,"2024":68} },
   { id: "Prince Andrew", count: 86, category: "political", locations: {"London":3,"New York":2,"Palm Beach":1}, years: {"2001":2,"2011":5,"2015":3,"2019":10,"2020":8,"2022":5,"2023":6,"2024":4} },
